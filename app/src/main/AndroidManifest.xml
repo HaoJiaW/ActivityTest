@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.activitytest" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    //使用定位需要的权限
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        //定位需要的meta-data/service
+        <meta-data android:name="com.baidu.lbsapi.API_KEY"
+            android:value="GwvjPn5o0TtGpzmvob46tvccHuIXrEcZ"/>
+        <service android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="nihao"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".view.FirstActivity"
+            android:label="@string/click" >
+            <intent-filter>
+                <action android:name="com.example.activitytest.view.nihao" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.FragmentActivity"
+            android:label="@string/click" >
+        </activity>
+        <activity
+            android:name=".view.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                //每个只能指定一个action,但是可以指定多个categroy;
+                <action android:name="com.example.activitytest.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.activitytest.MY_CAEGRROY" />
+
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ThridActivity"
+            android:label="@string/title_activity_thrid"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                //每个只能指定一个action,但是可以指定多个categroy;
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.RandomActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".view.random1Activity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".view.percentActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".view.TitleActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".ListView.LVActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".view.LoginActivity"
+            android:label="@string/login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Data.DataPickerActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".view.VideoPlayerActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".view.PhotoActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".ListView.PersonActivity"
+            android:label="通讯录--" >
+        </activity>
+        <activity
+            android:name=".ListView.MusicActivity"
+            android:label="本地音乐--" >
+        </activity>
+        <activity
+            android:name=".Internet.WebViewActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".view.MusicPlayerActivity"
+            android:label="本地音乐播放--" >
+        </activity>
+        <activity
+            android:name=".ListView.VideoActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+
+        <receiver
+            android:name="com.example.broadcasttest.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.broadcasttest.MyReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.My" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Internet.HttpUrlConnectionActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".view.ThreadTestActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+
+        <service
+            android:name="com.example.Service.MyService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <activity
+            android:name=".view.ServiceTestActivity"
+            android:label="@string/title_activity_random" >
+        </activity>
+        <activity
+            android:name=".Location.LocationTestActivity"
+            android:label="百度地图" >
+        </activity>
+        <activity
+        android:name=".MaterialUI.MaterialTestActivity"
+        android:label="网易云音乐"
+        android:icon="@drawable/ic_wangyiyun">
+    </activity>
+        <activity
+            android:name=".ListView.ZidingyiListViewActivity"
+            android:label="网易云音乐"
+            android:icon="@drawable/ic_wangyiyun">
+        </activity>
+        <activity
+            android:name=".FriutContentActivity"
+            android:label="网易云音乐"
+            android:icon="@drawable/ic_wangyiyun"
+            android:theme="@style/FruitContentTheme">
+        </activity>
+        <activity android:name=".Test.TestViewActivity"
+            android:label="@string/app_name"/>
+        <activity android:name=".Test.counterActivity"
+            android:label="@string/app_name"/>
+        <activity android:name=".Test.NiHongDengActivity"
+            android:label="@string/app_name"/>
+
+    </application>
+
+</manifest>

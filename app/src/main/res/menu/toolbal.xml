@@ -1,0 +1,14 @@
+<menu
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/wangyiyun_back"
+        android:icon="@drawable/back2"
+        android:title="返回"
+        app:showAsAction="always"></item>
+    <item android:id="@+id/wangyiyun_setup"
+        android:icon="@drawable/ic_setup"
+        android:title="设置"
+        app:showAsAction="never"></item>
+</menu>

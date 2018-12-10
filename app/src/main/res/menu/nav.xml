@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    <item android:id="@+id/contact"
+        android:title="联系人"/>
+    <item android:id="@+id/location"
+        android:title="百度地图"
+        ></item>
+    <item android:id="@+id/localmedia"
+        android:title="本地音乐">
+    </item>
+    <item android:id="@+id/localvideo"
+        android:title="本地视频"/>
+    <item android:id="@+id/photo"
+        android:title="相机以及选择图片"/>
+
+        <item android:id="@+id/zidingyi_listview"
+            android:title="自定义列表"/>
+        <item android:id="@+id/Z_Activity"
+            android:title="折叠标题栏界面"/>
+        <item android:id="@+id/Pull_test"
+            android:title="测试Pull解析"/>
+        <item android:id="@+id/Counter"
+            android:title="计算器"/>
+        <item android:id="@+id/deng"
+            android:title="霓虹灯"/>
+    </group>
+
+</menu>

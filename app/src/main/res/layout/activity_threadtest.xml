@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/thread_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="文本内容"/>
+    <Button
+        android:id="@+id/thread_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="变形"
+        android:textSize="19sp"/>
+
+</LinearLayout>

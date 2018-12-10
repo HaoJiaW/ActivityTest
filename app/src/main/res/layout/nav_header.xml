@@ -1,0 +1,33 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:padding="10dp"
+    android:background="?attr/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/idimage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/idimage"
+    android:layout_centerInParent="true"
+    />
+    <TextView
+        android:id="@+id/nav_header_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wei"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_below="@+id/idimage"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/nav_header_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="www.h534226096@163.com"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"/>
+
+</RelativeLayout>

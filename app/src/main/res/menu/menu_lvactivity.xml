@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/offline"
+        android:title="强制下线"/>
+    <item android:id="@+id/sava_data"
+        android:title="保存数据"/>
+    <item android:id="@+id/restore_data"
+        android:title="还原数据"/>
+</menu>
